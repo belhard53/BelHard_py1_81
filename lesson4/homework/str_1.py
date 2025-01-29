@@ -7,3 +7,17 @@
      -* количество гласных в данной фразе. Нельзя использовать if и for.
 
 '''
+
+s = 'qAqqq qUqqEq qqqUqqq qqAAA'.lower()
+
+vowels = 'aeiou'
+s1 = sum([s.count(i) for i in vowels])
+s2 = sum(map(s.count, vowels))
+s3 = len([*filter(lambda x: x in vowels, s)])
+
+print("Символов:", len(s))
+print("Слов:", len(s.split()))
+print("Гласных", s1, s2, s3)
+
+
+
