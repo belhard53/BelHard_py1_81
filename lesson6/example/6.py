@@ -84,8 +84,10 @@ c = 3
 # ok = True or False and False - False
 # ok = False or False or False - False
 
-# ok = False or True and True # - True
-# ok = False  or (True and True) - False - скобки решают
+# новый пример
+# ok = False and False or True    # - True
+# ok = False and (False or True)    # - False - скобки решают
+
 
 # is_admin = False
 # is_moderator = True

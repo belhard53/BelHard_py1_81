@@ -19,5 +19,3 @@ print("Символов:", len(s))
 print("Слов:", len(s.split()))
 print("Гласных", s1, s2, s3)
 
-
-
