@@ -35,7 +35,7 @@
 # while i <= 3:
 #     pas = input("")
 #     if pas == '1234':
-#         break
+#         break # останавливает цикл на этом месте
 #     print('err')
 #     i += 1
 
