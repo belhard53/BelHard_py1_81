@@ -1,6 +1,10 @@
 # a = list(range(11))
 # a = [1, 2, 3]
 
+a=[]
+for i in range(11):
+    a.append(i**2)
+
 a = []
 for i in range(11):
     # if i == 5:
@@ -11,11 +15,15 @@ for i in range(11):
         a.append(i**3)
 
 print(a)    
-    
-b = [i**2 for i in range(11)]  
+
+
+#  list comprehension    
+b = [i**2 for i in range(11)]  # аналог строчек 4-6
+b = [i**(2 if not i%2 else 3) for i in range(11)]  # аналог строчек 8-15
 print(b)  
 
-b = [i**2 for i in range(11) if not i % 2]
+#
+b = [i**2 for i in range(11) if not i%2]
 print(b)
 
 
@@ -36,6 +44,6 @@ print(a)
 b = [name.lower() for name in [user['name'] for user in users3 if user['age']==12]]
 print(b)
 
-
+#  dict comprehension   
 d = {user['name']:len(user['name']) for user in users3 if user['age']==12}
 print(d)
