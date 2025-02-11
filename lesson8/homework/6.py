@@ -7,3 +7,18 @@ Yes - если число уже встречалось и No, если нет
 если в списке не все целые числа вернуть False.
 
 """
+
+
+
+l = [1,2,3,1,4]
+l2 = l.copy()
+for i in range(len(l)):
+    if l[0:i].count(l[i]) > 0:
+        l2[i] = 'y'
+    else:
+        l2[i] = 'n'
+
+l3 = ['y' if l[:i].count(l[i]) else 'n' for i in range(len(l))]
+
+print(l2)
+print(l3)

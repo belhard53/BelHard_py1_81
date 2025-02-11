@@ -5,3 +5,9 @@
 Нельзя пользоваться collections.Counter!
 
 '''
+
+
+
+a = "asasassdb"
+
+b = {c:a.count(c) for c in set(a)}
