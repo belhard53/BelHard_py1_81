@@ -18,3 +18,25 @@
     
 '''
 
+
+
+a1 = set([1, 2, 11, 22])
+a2 = set([1, 2, 22, 33])
+a3 = set([1, 2, 33, 44])
+
+print(1, a1 | a2 | a3)
+
+print(2, a1.intersection(a2, a3)) # пересечение - есть во всех трех 
+print(22, a1 & a2 & a3) 
+
+
+print(3, a1.difference(a2, a3) | a2.difference(a1, a3) | a3.difference(a1, a2))
+
+
+
+# --------------------
+print(4, a1.difference(a2, a3)) # разность - есть в первом но нет в остальных
+print(44, a1 - a2 - a3) 
+
+print(5, a1.symmetric_difference(a2)) # есть в одном но нету в двух
+print(55, a1 ^ a2) # symmetric_difference

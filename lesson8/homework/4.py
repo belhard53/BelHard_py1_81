@@ -33,9 +33,27 @@ def num_format3(num, sep = " "):
     return f"{num:_.2f}".replace("_", " ")
 
 
-print(num_format1(12345678))
-print(num_format1(12345678.01))
-print(num_format1(12345678.1))
-print(num_format1(12345678.09))
+
+def num_format4(amount: float) -> str:
+    try:
+        if not isinstance(amount, (int, float)):
+            raise ValueError("Переданное значение должно быть числом")
+        
+        currency, cents = "{:.2f}".format(amount).split(".")
+        currency = " ".join(currency[::-1][i:i+3] for i in range(0, len(currency), 3))
+        currency = currency[::-1]
+
+        return "{}.{} руб.".format(currency, cents)
+    except Exception as e:
+        return "Ошибка: {}".format(e)
+
+
+num_format = num_format4
+
+print(num_format(12345678))
+print(num_format(12345678.01))
+print(num_format(12345678.1))
+print(num_format(12_345_678.09))
+print(num_format("12345678.09"))
 
     

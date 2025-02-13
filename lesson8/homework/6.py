@@ -11,6 +11,8 @@ Yes - если число уже встречалось и No, если нет
 
 
 l = [1,2,3,1,4]
+
+# 1 вариант
 l2 = l.copy()
 for i in range(len(l)):
     if l[0:i].count(l[i]) > 0:
@@ -18,6 +20,7 @@ for i in range(len(l)):
     else:
         l2[i] = 'n'
 
+# 2 вариант
 l3 = ['y' if l[:i].count(l[i]) else 'n' for i in range(len(l))]
 
 print(l2)
