@@ -41,6 +41,7 @@ t3.left(240) #
 
 t1.onclick(catch1)
 t2.onclick(catch2)
+t3.onclick(catch3)
 
 # добавляем всех в один список
 ts = []
