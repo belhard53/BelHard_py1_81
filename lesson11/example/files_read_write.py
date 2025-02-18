@@ -1,6 +1,7 @@
 # f = open('111.txt', "r") # только чтение
 # f = open('111.txt', "w") # стирает все - пишет новое
 # f = open('111.txt', "a") # добавить к старой информации
+# f.close()
 
 import os
 file_dir = os.path.dirname(__file__)
@@ -11,6 +12,9 @@ with open(f'{file_dir}\\111.txt', "r") as file:
     
     # txt = file.read() # читаем все
     
+    # txt = file.read(5) # читаем пять символов
+    # txt = file.read(5) # читаем следующих пять символов
+    
     # for line in file: # читаем по строкам
     #     print(line)
     
@@ -19,7 +23,7 @@ with open(f'{file_dir}\\111.txt', "r") as file:
 
 print(lines)    
 # print(txt)
-# f.close()
+
 
 
 
