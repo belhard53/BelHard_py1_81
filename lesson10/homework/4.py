@@ -9,3 +9,17 @@
 """
 
 
+
+def gen_fibonacci_numbers():
+    a, b = 0, 1
+    while True:
+        a, b = b, a + b
+        yield a
+
+fibonacci_gen = gen_fibonacci_numbers()
+
+print(next(fibonacci_gen)) #-> 1
+print(next(fibonacci_gen)) #-> 2
+print(next(fibonacci_gen)) #-> 2
+print(next(fibonacci_gen)) #-> 3
+print(next(fibonacci_gen)) #-> 5

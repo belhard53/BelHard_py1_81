@@ -13,6 +13,7 @@ class User:
         cls.login = new_login
     
      
+    
     # конструктор
     def __init__(self, name, sn, age):
         # name = 'Вася'
@@ -166,4 +167,4 @@ if __name__ == "__main__":
         
     print(list(group1)) # __iter__
 
-
+    print(group1[1].__dict__)

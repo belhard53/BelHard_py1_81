@@ -76,6 +76,8 @@ def wave_rec_no_for(li: list, prefix: str = ""):
         wave_rec_no_for(li[1:], prefix)
 
 
+
+# без рекурсии от Валентынович Андрей 
 def wave_no_rec(li: list):
     """
     Функция для вывода элементов списка без рекурсии
@@ -112,6 +114,24 @@ def wave_no_rec(li: list):
             print(f"Error: {char}")
 
     print()
+
+
+# без рекурсии от Слинка Марина
+def get_list_view(deep_list, padding="-"):
+    stack = []
+
+    for item in reversed(deep_list):
+      stack.append((item, 0))
+    
+    while stack:
+      item, level = stack.pop()
+
+      if isinstance(item, list):
+        for element in reversed(item):
+          stack.append((element, level + 1))
+      else:
+        shifted_padding = padding * 2 * level
+        print(f"{shifted_padding}{item}")
 
 
 # some_list = [1, 2, 3, [4, [5, 6], 7], 8, 9]
